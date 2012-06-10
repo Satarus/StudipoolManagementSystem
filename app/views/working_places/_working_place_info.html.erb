@@ -1,0 +1,28 @@
+<%@places.each do |working_place|%>
+  <%current_timeslot = working_place.get_current_time_slot%>
+  <div class="working_place_info" working_place_nr=<%=working_place.place_nr%>>
+    <div class="working_place_title"><h3>Info for working place <%=working_place.place_nr%></h3></div>
+    <%if current_timeslot != nil%>
+    <table class="working_place_info_table">
+      <tr>
+        <td>From:</td>
+        <td><%=current_timeslot.from%>
+      </tr>
+      <tr>
+        <td>To:</td>
+        <td><%=current_timeslot.to%>
+      </tr>
+      <tr>
+        <%unless current_timeslot.user == nil%>
+          <td>Booked by:</td>
+          <td><%=current_timeslot.user.nickname%>
+        <%else%>
+          <td> Book now</td>
+        <%end%>
+      </tr>
+    </table>
+  <%else%>
+    <p><%= Time.now %></p>
+  <%end%>
+  </div>
+<%end%>

@@ -1,0 +1,16 @@
+<div class="subtitle"/>
+  <h3> Current time slot:</h3>
+</div>
+<table class="current_time_slot">
+  <tr>
+    <%if @current_time_slot != nil%>
+      <td> From: </td>
+      <td><%= @current_time_slot.from %></td>
+      <td> To: </td>
+      <td><%= @current_time_slot.to %></td>
+      <td> Book now ! </td>
+    <%else%>
+      <td><%= Time.now.strftime("%e %B %Y (%A) - %H:%M") %></td>
+    <%end%>
+  </tr>
+</table>

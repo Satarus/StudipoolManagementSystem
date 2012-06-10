@@ -1,0 +1,15 @@
+<h1>New time slot</h1>
+<%=form_for @time_slot do |f|%>
+  <div>
+    <%=f.label :from%>
+    <%=f.number_field :from, :in => 0...24 %>
+  </div>
+  <div>
+    <%=f.label :to%>
+    <%=f.number_field :to, :in => 0...24%>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<%end%>
+

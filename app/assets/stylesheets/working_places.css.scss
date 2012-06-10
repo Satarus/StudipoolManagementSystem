@@ -1,0 +1,115 @@
+// Place all the styles related to the Working_Places controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$start_top:         78px;
+$difference_to_position: 153px;
+
+@mixin working_place_table($top: 78px){
+  position:         absolute; top: $top;  left: 7px;
+  border-collapse:  collapse;
+}
+
+@mixin working_place_cell_position($left: 0px){
+  position:         absolute; left: $left;
+  border:           solid 5px red;
+  margin:           0px;
+  padding:          0px;
+}
+
+.weekdays{
+  margin-top:       10px;
+  margin-bottom:    10px;
+  td{
+    width:          150px;
+  }
+}
+
+.time_slots{
+  td{
+    width:            150px;
+  }
+}
+.subtitle{
+  h3{
+    margin:         0px;
+  }
+}
+
+.current_time_slot{
+  margin-bottom: 10px;
+}
+
+.working_place_info{
+  border:           solid 2px black;
+  float:            right;
+  display:          none;
+  position:         fixed; left: 870px;
+  
+  h3{
+    margin-top:     0px;
+  }
+}
+
+.working_place_overview{
+  position:         relative;
+  background-image: url("studipool_workspaces_overview_transparent.png");
+  margin:           0px;
+  height:           724px;
+  width:            853px;
+}
+
+.working_place_table_0{
+  @include working_place_table;
+}
+
+.working_place_table_1{
+  @include working_place_table($start_top+$difference_to_position);
+}
+
+.working_place_table_2{
+  @include working_place_table($start_top+2*$difference_to_position);
+}
+
+.working_place_table_3{
+  @include working_place_table($start_top+3*$difference_to_position);
+}
+
+.working_place_row{
+}
+
+.working_place_cell_0{
+  height:           123px;
+  width:            76px;
+  @include working_place_cell_position()
+}
+
+.working_place_cell_1{
+  height:           123px;
+  width:            76px;
+  @include working_place_cell_position(189px)
+}
+
+.working_place_cell_2{
+  height:           123px;
+  width:            76px;
+  @include working_place_cell_position(285px)
+}
+
+.working_place_cell_3{
+  height:           123px;
+  width:            76px;
+  @include working_place_cell_position(475px)
+}
+
+.working_place_cell_4{
+  height:           123px;
+  width:            76px;
+  @include working_place_cell_position(572px)
+}
+
+.working_place_cell_5{
+  height:           123px;
+  width:            76px;
+  @include working_place_cell_position(762px)
+}

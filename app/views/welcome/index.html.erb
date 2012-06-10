@@ -1,0 +1,12 @@
+<%if user_signed_in?%>
+  <h1>Welcome <%= current_user.nickname%></h1>
+
+  <%= link_to "Working places" ,working_places_path %>
+
+<%else%>
+  <h1> Welcome unknown, please log in or sign up</h1>
+<%end%>
+
+<div class="content">
+  <%= yield %>
+</div>

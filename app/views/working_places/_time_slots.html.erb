@@ -1,0 +1,23 @@
+<table class="time_slots">
+  <%if @time_slots.empty?%>
+    <p>You can't book this place for today. Please choose another day</p>
+  <%else%>
+    <%for time_slot in @time_slots do%>
+        <tr>
+          <td>
+            From: <%=time_slot.from%>
+          </td>
+          <td>
+            To: <%=time_slot.to%>  
+          </td>
+         <td>
+          <%if time_slot.user != nil%>
+            Reserved by: <%= time_slot.user.nickname%>
+          <%else%>
+            Book now !
+          <%end%>
+        </td> 
+      </tr>
+    <%end%>
+  <%end%>
+</table>

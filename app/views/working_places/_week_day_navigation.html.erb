@@ -1,0 +1,8 @@
+<table class="weekdays">
+  <tr>
+    <%for i in 1..5 do%>
+      <td><%= link_to "#{Date::DAYNAMES[i]}", working_place_at_day_path(@place.id,i)%></td> 
+    <%end%>
+    <td><%= link_to "Back to overview", working_places_path%></td>
+  </tr>
+</table>

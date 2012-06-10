@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  working_place_id: 1
+  from: 1
+  to: 1
+  user_id: 1
+
+two:
+  working_place_id: 1
+  from: 1
+  to: 1
+  user_id: 1

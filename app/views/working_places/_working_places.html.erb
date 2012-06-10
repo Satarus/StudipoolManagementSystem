@@ -1,0 +1,16 @@
+<div class="working_place_overview">
+  <% i = 3 %>
+  <% j = 3 %>
+  <%for x in 0...4 do%>
+    <table class="working_place_table_<%=x%>">
+      <tr class="working_place_<%=x%>_row">
+        <%for y in 0...6 do%>
+          <%place = @places[i]%>
+          <td class="working_place_cell_<%=y%>" working_place_nr="<%=place.place_nr%>" bookable="<%=place.is_bookable?%>"></td>
+          <%i+=4%>
+        <%end%>
+        <%i=j-=1%>
+      </tr>
+    </table>
+  <%end%>
+</div>
