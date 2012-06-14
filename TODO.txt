@@ -26,16 +26,16 @@ Working places
 Booking
     
     --implement booking--
-    Create the model
-    Bookings can't last longer then one month
-    Link the model with timeslots (booking has many time slots)
+    [ ] Create the model
+    [ ] Bookings can't last longer then one month
+    [ ] Link the model with timeslots (booking has many time slots)
 
 Time slots
 
     --implementing time slots--
     [x] Create time slots over the day for each working place
-    Link time slots to booking (time slot belongs to booking)
-    Add day of week to model      
+    [ ] Link time slots to booking (time slot belongs to booking)
+    [ ] Add day of week to model      
     
 User
     
