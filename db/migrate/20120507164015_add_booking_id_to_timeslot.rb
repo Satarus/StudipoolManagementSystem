@@ -1,5 +1,5 @@
 class AddBookingIdToTimeslot < ActiveRecord::Migration
   def change
-    add_column :timeslots, :booking_id, :integer
+    add_column :time_slots, :booking_id, :integer
   end
 end

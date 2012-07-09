@@ -27,4 +27,6 @@ gem 'devise'
 gem 'jquery-rails'
 
 #Thin webserver ;)
-gem 'thin'
+gem "thin", "1.3.1"
+gem "eventmachine", "1.0.0.rc.4"
+
